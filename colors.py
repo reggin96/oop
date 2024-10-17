@@ -24,14 +24,26 @@ print(gray.toHex())
 print(gray.redColor()) '''
 from random import*
 class Rectangle:
+    count=0
     def __init__(self,name,width=0,height=0,color='green'):
         self.width=width
         self.height=height
         self.name=name
         self.color=color
+        Rectangle.count+=1
+    def inform_count():
+        print(f"Īnstance created:{Rectangle.count}")
+    def itroduce(self):
+            print(f"{self.name} {self.color} {self.width}x{self.height}")
+    def calculate_area(self):
+          print(f"the area is {self.width*self.height}")
 rect1=Rectangle("rectangle",100,3141)
+rect1.itroduce()
+rect1.calculate_area()
 print(f"{rect1.name} {rect1.width}x{rect1.height} {rect1.color}")
 rect2=Rectangle("sqwar3e")
+rect2.itroduce()
+rect2.calculate_area()
 print(f"{rect2.name} {rect2.width}x{rect2.height} {rect2.color}")
 rectan=[]
 colors=['red','green','blue','yellow','purple','orange']
@@ -39,3 +51,4 @@ for i in range(100):
         rectan.append(Rectangle(f"Name{i+1}",randint(1,500), randint(1,500), choice(colors)))
 for rect in rectan:
     print(f"{rect.name} {rect.width}x{rect.height} {rect.color}")
+Rectangle.inform_count()
