@@ -4,7 +4,7 @@ class Autom:
         self.modelis=modelis
         self.gads=gads
     def rez(self,):
-        self.dienas=int(input("ievadiet dienu skaitu"))
+        s=int(input("ievadiet dienu skaitu"))
         if self.gads>2020:
             self.cena_par_dienu=50
             self.cena=self.dienas*self.cena_par_dienu
